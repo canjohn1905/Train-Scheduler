@@ -19,14 +19,14 @@ var firebaseConfig = {
     event.preventDefault();
   
     // Grabs user input
-    var empName = $("#employee-name-input").val().trim();
+    var trainName = $("#train-name-input").val().trim();
     var empRole = $("#role-input").val().trim();
     var empStart = moment($("#start-input").val().trim(), "MM/DD/YYYY").format("X");
     var empRate = $("#rate-input").val().trim();
   
     // Creates local "temporary" object for holding employee data
     var newEmp = {
-      name: empName,
+      name: trainName,
       role: empRole,
       start: empStart,
       rate: empRate
@@ -44,7 +44,7 @@ var firebaseConfig = {
     alert("Employee successfully added");
   
     // Clears all of the text-boxes
-    $("#employee-name-input").val("");
+    $("#train-name-input").val("");
     $("#role-input").val("");
     $("#start-input").val("");
     $("#rate-input").val("");
@@ -89,5 +89,5 @@ var firebaseConfig = {
     );
   
     // Append the new row to the table
-    $("#employee-table > tbody").append(newRow);
+    $("#train-table > tbody").append(newRow);
   });
